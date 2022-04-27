@@ -13,6 +13,7 @@ namespace FormulariosWindowsForms
     public partial class MenuPrincipal : Form
     {
         private int childFormNumber = 0;
+        private static FRMCategoria fCategoria;
 
         public MenuPrincipal()
         {
@@ -116,10 +117,14 @@ namespace FormulariosWindowsForms
 
         private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FRMCategoria fCategoria = new FRMCategoria();
-            fCategoria.MdiParent = this;
-            if (fCategoria)
+            
+            if (fCategoria == null)
+            {
+                fCategoria = new FRMCategoria();
+                fCategoria.MdiParent = this;
+            }
             fCategoria.Show();
+
         }
     }
 }
