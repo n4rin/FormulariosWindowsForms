@@ -30,15 +30,15 @@ namespace FormulariosWindowsForms
         private void InitializeComponent()
         {
             this.GRPCategoria = new System.Windows.Forms.GroupBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.rdReceita = new System.Windows.Forms.RadioButton();
-            this.rdDespesa = new System.Windows.Forms.RadioButton();
-            this.chkStatus = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chkStatus = new System.Windows.Forms.CheckBox();
+            this.rdDespesa = new System.Windows.Forms.RadioButton();
+            this.rdReceita = new System.Windows.Forms.RadioButton();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -65,47 +65,49 @@ namespace FormulariosWindowsForms
             this.GRPCategoria.TabStop = false;
             this.GRPCategoria.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txtNome
+            // label4
             // 
-            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNome.Location = new System.Drawing.Point(137, 24);
-            this.txtNome.MaxLength = 50;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(363, 29);
-            this.txtNome.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(16, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Status";
+            this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtDescricao
+            // label3
             // 
-            this.txtDescricao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDescricao.Location = new System.Drawing.Point(137, 68);
-            this.txtDescricao.MaxLength = 100;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(612, 29);
-            this.txtDescricao.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(16, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tipo";
+            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
-            // rdReceita
+            // label2
             // 
-            this.rdReceita.AutoSize = true;
-            this.rdReceita.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdReceita.Location = new System.Drawing.Point(137, 114);
-            this.rdReceita.Name = "rdReceita";
-            this.rdReceita.Size = new System.Drawing.Size(90, 29);
-            this.rdReceita.TabIndex = 1;
-            this.rdReceita.TabStop = true;
-            this.rdReceita.Text = "Receita";
-            this.rdReceita.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(16, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Descrição";
+            this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
-            // rdDespesa
+            // label1
             // 
-            this.rdDespesa.AutoSize = true;
-            this.rdDespesa.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdDespesa.Location = new System.Drawing.Point(247, 114);
-            this.rdDespesa.Name = "rdDespesa";
-            this.rdDespesa.Size = new System.Drawing.Size(100, 29);
-            this.rdDespesa.TabIndex = 1;
-            this.rdDespesa.TabStop = true;
-            this.rdDespesa.Text = "Despesa";
-            this.rdDespesa.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(16, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nome";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // chkStatus
             // 
@@ -121,49 +123,48 @@ namespace FormulariosWindowsForms
             this.chkStatus.UseVisualStyleBackColor = true;
             this.chkStatus.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // label1
+            // rdDespesa
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(16, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.rdDespesa.AutoSize = true;
+            this.rdDespesa.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdDespesa.Location = new System.Drawing.Point(247, 114);
+            this.rdDespesa.Name = "rdDespesa";
+            this.rdDespesa.Size = new System.Drawing.Size(100, 29);
+            this.rdDespesa.TabIndex = 1;
+            this.rdDespesa.TabStop = true;
+            this.rdDespesa.Text = "Despesa";
+            this.rdDespesa.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // rdReceita
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(16, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Descrição";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
+            this.rdReceita.AutoSize = true;
+            this.rdReceita.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdReceita.Location = new System.Drawing.Point(137, 114);
+            this.rdReceita.Name = "rdReceita";
+            this.rdReceita.Size = new System.Drawing.Size(90, 29);
+            this.rdReceita.TabIndex = 1;
+            this.rdReceita.TabStop = true;
+            this.rdReceita.Text = "Receita";
+            this.rdReceita.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // txtDescricao
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(16, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tipo";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
+            this.txtDescricao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDescricao.Location = new System.Drawing.Point(137, 68);
+            this.txtDescricao.MaxLength = 100;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(612, 29);
+            this.txtDescricao.TabIndex = 0;
             // 
-            // label4
+            // txtNome
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(16, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Status";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
+            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNome.Location = new System.Drawing.Point(137, 24);
+            this.txtNome.MaxLength = 50;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(363, 29);
+            this.txtNome.TabIndex = 0;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // btnNovo
             // 
@@ -174,6 +175,7 @@ namespace FormulariosWindowsForms
             this.btnNovo.TabIndex = 1;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.novoRegistro);
             // 
             // btnAlterar
             // 
@@ -194,6 +196,7 @@ namespace FormulariosWindowsForms
             this.btnExcluir.TabIndex = 1;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.subMenuCategoria);
             // 
             // btnCancelar
             // 
@@ -214,6 +217,7 @@ namespace FormulariosWindowsForms
             this.btnSalvar.TabIndex = 1;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.salvarClick);
             // 
             // FRMCategoria
             // 
