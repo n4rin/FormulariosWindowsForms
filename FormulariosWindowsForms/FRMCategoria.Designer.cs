@@ -164,7 +164,6 @@ namespace FormulariosWindowsForms
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(363, 29);
             this.txtNome.TabIndex = 0;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // btnNovo
             // 
@@ -207,6 +206,7 @@ namespace FormulariosWindowsForms
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.cancelarCat);
             // 
             // btnSalvar
             // 
@@ -235,6 +235,7 @@ namespace FormulariosWindowsForms
             this.Name = "FRMCategoria";
             this.ShowIcon = false;
             this.Text = "Categoria";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fechandoForm);
             this.Load += new System.EventHandler(this.FRMCategoria_Load);
             this.GRPCategoria.ResumeLayout(false);
             this.GRPCategoria.PerformLayout();

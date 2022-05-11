@@ -101,6 +101,26 @@ namespace FormulariosWindowsForms
             btnNovo.Enabled = true;
         }
 
-       
+        private void fechandoForm(object sender, FormClosingEventArgs e)
+        {
+            if (Edicao || Insercao)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Continue aqui", "Aviso do sistema !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void cancelarCat(object sender, EventArgs e)
+        {
+            btnNovo.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnSalvar.Visible = false;
+            btnCancelar.Visible = false;
+            btnExcluir.Visible = true;
+            GRPCategoria.Enabled = false;
+            btnNovo.Focus();
+            Edicao = false;
+            Insercao = true;
+        }
     }
 }
