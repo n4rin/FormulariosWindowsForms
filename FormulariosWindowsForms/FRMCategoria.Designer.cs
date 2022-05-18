@@ -44,7 +44,9 @@ namespace FormulariosWindowsForms
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.dgCategoria = new System.Windows.Forms.DataGridView();
             this.GRPCategoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // GRPCategoria
@@ -168,7 +170,7 @@ namespace FormulariosWindowsForms
             // btnNovo
             // 
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNovo.Location = new System.Drawing.Point(28, 226);
+            this.btnNovo.Location = new System.Drawing.Point(12, 578);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(94, 46);
             this.btnNovo.TabIndex = 1;
@@ -179,7 +181,7 @@ namespace FormulariosWindowsForms
             // btnAlterar
             // 
             this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterar.Location = new System.Drawing.Point(128, 226);
+            this.btnAlterar.Location = new System.Drawing.Point(112, 578);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(94, 46);
             this.btnAlterar.TabIndex = 1;
@@ -190,7 +192,7 @@ namespace FormulariosWindowsForms
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExcluir.Location = new System.Drawing.Point(228, 226);
+            this.btnExcluir.Location = new System.Drawing.Point(212, 578);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(94, 46);
             this.btnExcluir.TabIndex = 1;
@@ -201,7 +203,7 @@ namespace FormulariosWindowsForms
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCancelar.Location = new System.Drawing.Point(667, 226);
+            this.btnCancelar.Location = new System.Drawing.Point(694, 578);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 46);
             this.btnCancelar.TabIndex = 1;
@@ -212,7 +214,7 @@ namespace FormulariosWindowsForms
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.Location = new System.Drawing.Point(328, 226);
+            this.btnSalvar.Location = new System.Drawing.Point(312, 578);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(94, 46);
             this.btnSalvar.TabIndex = 1;
@@ -220,11 +222,21 @@ namespace FormulariosWindowsForms
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.salvarClick);
             // 
+            // dgCategoria
+            // 
+            this.dgCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCategoria.Location = new System.Drawing.Point(12, 224);
+            this.dgCategoria.Name = "dgCategoria";
+            this.dgCategoria.RowTemplate.Height = 25;
+            this.dgCategoria.Size = new System.Drawing.Size(776, 329);
+            this.dgCategoria.TabIndex = 2;
+            // 
             // FRMCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 288);
+            this.ClientSize = new System.Drawing.Size(800, 636);
+            this.Controls.Add(this.dgCategoria);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
@@ -240,6 +252,7 @@ namespace FormulariosWindowsForms
             this.Load += new System.EventHandler(this.FRMCategoria_Load);
             this.GRPCategoria.ResumeLayout(false);
             this.GRPCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCategoria)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +274,6 @@ namespace FormulariosWindowsForms
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView dgCategoria;
     }
 }
