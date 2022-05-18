@@ -187,6 +187,7 @@ namespace FormulariosWindowsForms
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterarClick);
             // 
             // btnExcluir
             // 
@@ -197,7 +198,7 @@ namespace FormulariosWindowsForms
             this.btnExcluir.TabIndex = 1;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.subMenuCategoria);
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluirClick);
             // 
             // btnCancelar
             // 
