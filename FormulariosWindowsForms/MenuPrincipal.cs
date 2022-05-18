@@ -126,5 +126,10 @@ namespace FormulariosWindowsForms
             fCategoria.Show();
 
         }
+
+        private void ajudaSobreClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nome: Guilherme Garcia Nallin RA: 201239 \nNome: Aline Benedicto Soares RA: 201268", "Aviso do Sistema", MessageBoxButtons.OK);
+        }
     }
 }
