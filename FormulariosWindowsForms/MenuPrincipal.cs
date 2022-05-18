@@ -124,6 +124,7 @@ namespace FormulariosWindowsForms
                 fCategoria.MdiParent = this;
             }
             fCategoria.Show();
+            fCategoria = null;
 
         }
 

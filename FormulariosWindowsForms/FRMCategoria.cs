@@ -128,18 +128,38 @@ namespace FormulariosWindowsForms
         private void salvarClick(object sender, EventArgs e)
         {
             MessageBox.Show("Registro gravado com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnNovo.Enabled = true;
+            btnNovo.Enabled = true; 
+            btnNovo.Focus();
+            txtNome.Enabled = true;
             txtDescricao.Enabled = true;
             btnAlterar.Enabled = true;
             btnCancelar.Visible = false;
-            btnNovo.Enabled = true;
             btnExcluir.Visible = true;
             btnSalvar.Visible = false;
             GRPCategoria.Enabled = false;
-            btnNovo.Focus();
+            dgCategoria.Enabled = true;
             Insercao = false;
             Edicao = false;
 
+
+            if (Insercao)
+            {
+
+            }
+
+            if (Edicao)
+            {
+                Categoria ct = lstCategoria.Find(item => item.Nome == txtNome.Text.Trim());
+                if(ct != null)
+                {
+                    ct.Descricao = txtDescricao.Text.Trim();
+                    ct.Tipo = rdReceita.Checked ? 1 : 2;
+                    ct.Status = chkStatus.Checked ? 1 : 0;
+                }
+            }
+            carregaGridCategoria();
+
+            MessageBox.Show("Registro gravado com sucesso !", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void fechandoForm(object sender, FormClosingEventArgs e)
