@@ -66,24 +66,18 @@ namespace FormulariosWindowsForms
             btnNovo.Enabled = false;
             Insercao = true;
             Edicao = false;
-
+            chkStatus.Checked = true;
         }
 
-        private void subMenuCategoria(object sender, EventArgs e)
+        private void btnExcluirClick(object sender, EventArgs e)
         {
-            if (fCategoria == null)
-            {
-                fCategoria = new FRMCategoria();
-                fCategoria.FormClosed += new FormClosedEventHandler(fCategoria_Closed);
-            
-            } else
+            DialogResult myDialog = MessageBox.Show("Confirmar Exclusão ?", "Aviso do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+            if (myDialog == DialogResult.Yes)
             {
-                fCategoria.Activate();
+                MessageBox.Show("Registro excluído com sucesso", "Aviso de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            fCategoria.MdiParent = this;
-            fCategoria.Show();
+            btnNovo.Focus();
         }
 
         public void fCategoria_Closed(object sender, FormClosedEventArgs e)
@@ -94,13 +88,55 @@ namespace FormulariosWindowsForms
         private void salvarClick(object sender, EventArgs e)
         {
             MessageBox.Show("Registro gravado com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnNovo.Enabled = false;
-            txtDescricao.Enabled = true;
-            btnAlterar.Enabled = false;
-            btnCancelar.Visible = true;
             btnNovo.Enabled = true;
+            txtDescricao.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnCancelar.Visible = false;
+            btnNovo.Enabled = true;
+            btnExcluir.Visible = true;
+            btnSalvar.Visible = false;
+            GRPCategoria.Enabled = false;
+            btnNovo.Focus();
+            Insercao = false;
+            Edicao = false;
+
         }
 
-       
+        private void fechandoForm(object sender, FormClosingEventArgs e)
+        {
+            if (Edicao || Insercao)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Continue aqui", "Aviso do sistema !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void cancelarCat(object sender, EventArgs e)
+        {
+            btnNovo.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnSalvar.Visible = false;
+            btnCancelar.Visible = false;
+            btnExcluir.Visible = true;
+            GRPCategoria.Enabled = false;
+            btnNovo.Focus();
+
+            // solução individual, pois a solução do pdf não funcionava
+            Edicao = false;
+            Insercao = false;
+        }
+
+        private void btnAlterarClick(object sender, EventArgs e)
+        {
+            btnNovo.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Visible = false;
+            btnSalvar.Visible = true;
+            btnCancelar.Visible = true;
+            GRPCategoria.Enabled = true;
+            txtNome.Focus();
+            Insercao = false;
+            Edicao = true;
+        }
     }
 }

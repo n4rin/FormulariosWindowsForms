@@ -335,14 +335,14 @@ namespace FormulariosWindowsForms
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.categoriaToolStripMenuItem.Text = "Categoria";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // contaToolStripMenuItem1
             // 
             this.contaToolStripMenuItem1.Name = "contaToolStripMenuItem1";
-            this.contaToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.contaToolStripMenuItem1.Size = new System.Drawing.Size(147, 26);
             this.contaToolStripMenuItem1.Text = "Conta";
             // 
             // toolsMenu
@@ -462,6 +462,7 @@ namespace FormulariosWindowsForms
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.aboutToolStripMenuItem.Text = "&Sobre ... ...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.ajudaSobreClick);
             // 
             // toolStrip
             // 
