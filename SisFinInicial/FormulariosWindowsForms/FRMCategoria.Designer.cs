@@ -230,6 +230,7 @@ namespace FormulariosWindowsForms
             this.dgCategoria.RowTemplate.Height = 25;
             this.dgCategoria.Size = new System.Drawing.Size(776, 329);
             this.dgCategoria.TabIndex = 2;
+            this.dgCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCategoria_CellContentClick);
             // 
             // FRMCategoria
             // 

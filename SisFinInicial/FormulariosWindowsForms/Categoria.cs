@@ -47,10 +47,12 @@ namespace FormulariosWindowsForms
             return _lstCategoria;
         }
 
+
+
         public List<Categoria> GeraCategorias()
         {
-            Categoria _cat1 = new Categoria(1, "salário", "salário da Unicamp", 1, 1);
-            Categoria _cat2 = new Categoria(1, "Combustivel", "consumo de combustivel", 2, 1);
+            Categoria _cat1 = new Categoria(1, "Salário", "Salário da UNICAMP", 1, 1);
+            Categoria _cat2 = new Categoria(1, "Combustivel", "Despesas com combustivel", 2, 1);
             _lstCategoria.Add(_cat1);
             _lstCategoria.Add(_cat2);
             return _lstCategoria;
