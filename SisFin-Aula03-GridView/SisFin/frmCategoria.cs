@@ -205,13 +205,14 @@ namespace SisFin
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult resp;
-            resp = MessageBox.Show("Confirma exclusão?", "Aviso do sisema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resp == DialogResult.Yes)
-            {
-                MessageBox.Show("Registro excluido com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult myDialog = MessageBox.Show("Confirmar Exclusão ?", "Aviso do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+            if (myDialog == DialogResult.Yes)
+            {
+                MessageBox.Show("Registro excluído com sucesso", "Aviso de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgCategoria.Rows.RemoveAt(dgCategoria.CurrentRow.Index);
             }
+            btnNovo.Focus();
         }
         //==================================
 
@@ -225,6 +226,11 @@ namespace SisFin
         }
 
         private void grpCategoria_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

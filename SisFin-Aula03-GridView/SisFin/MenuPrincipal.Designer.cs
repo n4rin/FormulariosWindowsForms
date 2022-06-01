@@ -340,7 +340,8 @@ namespace SisFin
             // 
             this.subMenuConta.Name = "subMenuConta";
             this.subMenuConta.Size = new System.Drawing.Size(180, 34);
-            this.subMenuConta.Text = "Conta";
+            this.subMenuConta.Text = "Contas";
+            this.subMenuConta.Click += new System.EventHandler(this.subMenuConta_Click);
             // 
             // toolsMenu
             // 

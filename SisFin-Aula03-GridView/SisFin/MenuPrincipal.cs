@@ -7,6 +7,7 @@ namespace SisFin
     {
         private int childFormNumber = 0;
         private static frmCategoria fCategoria;
+        private static frmContas fContas;
 
         public MenuPrincipal()
         {
@@ -137,6 +138,27 @@ namespace SisFin
         private void editMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void subMenuConta_Click(object sender, EventArgs e)
+        {
+            if (fContas == null)
+            {
+                fContas = new frmContas();
+                fContas.FormClosed += new FormClosedEventHandler(fContas_Closed);
+            }
+            else
+            {
+                fContas.Activate();
+            }
+
+            fContas.MdiParent = this;
+            fContas.Show();
+        }
+
+        void fContas_Closed(object sender, FormClosedEventArgs e)
+        {
+            fContas = null;
         }
     }
 }
