@@ -14,7 +14,7 @@ namespace SisFin
         public int Tipo { get; set; }
         public int Status { get; set; }
 
-        private List<Categoria> _lstCategoria = new List<Categoria>();
+        private static List<Categoria> _lstCategoria = new List<Categoria>();
 
         public Categoria()
         {
