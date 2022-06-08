@@ -116,6 +116,7 @@ namespace SisFin
             this.dgContas.RowTemplate.Height = 25;
             this.dgContas.Size = new System.Drawing.Size(622, 291);
             this.dgContas.TabIndex = 4;
+            this.dgContas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgContas_RowEnter);
             // 
             // frmContas
             // 
