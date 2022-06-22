@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "WinFormsAval3/1.0.0": {
+        "runtime": {
+          "WinFormsAval3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WinFormsAval3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
