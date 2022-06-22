@@ -147,15 +147,21 @@ namespace WinFormsAval3
                     {
                         if (conta.Tipo == 0)
                         {
+                            // tentei de tudo que é jeito :(
                             rdComum.Checked = true;
-                            if (Convert.ToDouble(txtValor.Text) < (conta.Limite + conta.Saldo))
+                            double valorSacar = Convert.ToDouble(txtValor.Text);
+                            double valorTotal = Convert.ToDouble(txtSaldo.Text);
+                            if (valorSacar < valorTotal)
                             {
-                                conta.Saldo -= Convert.ToDouble(txtValor.Text);
+                                valorSacar -= valorTotal;
+                                valorTotal = 0;
+                                txtSaldo.Text = "0";
+
+                                conta.Limite -= valorSacar;
                                 txtLimite.Text = Convert.ToString(conta.Limite);
-                                txtSaldo.Text = Convert.ToString(conta.Saldo);
                             } else
                             {
-                                MessageBox.Show("O valor a ser sacado é maior que o limite", "Valor Inválido !",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("O valor a ser sacado é inválido", "Valor Inválido !",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                         else
